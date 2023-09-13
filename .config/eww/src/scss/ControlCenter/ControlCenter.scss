@@ -1,0 +1,68 @@
+.control-center-button-container{
+    background-color: transparent;
+}
+
+.control-center-inner-container{
+    background-color: $background-dark;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+    margin-top: 2px;
+}
+
+
+
+.control-center-buttons{
+    margin: 5px;
+    min-height: 60px;
+    border-radius: 15px;
+    background-color: $background-normal;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    &:hover{
+        border-color: $bright-secondary;
+        transition: 0.2s;
+    }
+}
+
+.brightness-slider scale trough highlight{
+    all:unset;
+    background-color: $bright-secondary;
+    border-radius: 20px;
+
+}
+
+.brightness-slider scale trough{
+    all:unset;
+    background-color: $background-transparent;
+    border-radius: 10px;
+    min-width: 20px;
+    min-height: 20px;
+    margin: 2px;
+}
+
+.control-center-slider-labels{
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 22px;
+}
+
+.control-center-power-button{
+    background-color: $background-dark;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+    background-size: 22px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin-left: 0px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 15px;
+    &:hover{
+        border-color: $bright-secondary;
+        transition: 0.2s;
+    }
+}

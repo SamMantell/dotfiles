@@ -1,0 +1,109 @@
+(defwidget ControlCenter []
+    (box :orientation "v"
+         :valigen "start"
+         :haligen "center"
+         :vexpand false
+         :space-evenly false
+         :class "system-info-container"
+        (centerbox
+        (box) 
+        (label :class "info-label" 
+               :orientation "h" :text "Control" 
+               :style "padding-bottom: 15px" "System Info") 
+        (box
+            (box)
+            (button :class "control-center-power-button" 
+                    :style "background-image: url('/usr/share/icons/Reversal-purple-dark/status/22/system-shutdown-symbolic.svg');"
+                    :onclick "scripts/eww.sh open --toggle ControlCenter & scripts/eww.sh close CloseWindow & scripts/eww.sh open LogoutMenu")))
+            (box :space-evenly false :class "control-center-inner-container":orientation "v" :space-evenly true :haligen "center" :valigen "start"
+                 (box :orientation "h" 
+                      :haligen "center"
+                      :valigen "center" 
+                      :hexpand true 
+                      :space-evenly true
+                      (box :class "control-center-button-container" 
+                           :style ""
+                           (button :class "control-center-buttons" 
+                                   :style "${replace(v_wifi-status, 'on', 'background-color: ${v_button-enabled-background}; border-color: ${v_button-enabled-border}')}"
+                                   :onclick "./scripts/ToggleScript.sh WiFi"
+                                   "WiFi"))
+                      (box :class "control-center-button-container" 
+                           :style ""
+                          (button :class "control-center-buttons" 
+                                  :style "${replace(v_audio-status, 'on', 'background-color: ${v_button-enabled-background}; border-color: ${v_button-enabled-border}')}"
+                                  :onclick "./scripts/ToggleScript.sh Audio"
+                                  "Audio"))
+                      (box :class "control-center-button-container" 
+                           :style ""
+                          (button :class "control-center-buttons" 
+                                  :style "${replace(v_mic-status, 'on', 'background-color: ${v_button-enabled-background}; border-color: ${v_button-enabled-border}')}"
+                                  :onclick "./scripts/ToggleScript.sh Mic"
+                                  "Mic")))
+                (box :orientation "h" 
+                     :haligen "center"
+                     :valigen "center" 
+                     :hexpand true 
+                     :space-evenly true
+                     (box :class "control-center-button-container" 
+                         :style ""
+                         (button :class "control-center-buttons" 
+                              :style "${replace(v_bluetooth-status, 'on', 'background-color: ${v_button-enabled-background}; border-color: ${v_button-enabled-border}')}"
+                              :onclick "./scripts/ToggleScript.sh Bluetooth"
+                              "Bluetooth"))
+                    (box :class "control-center-button-container" 
+                         :style ""
+                         (button :class "control-center-buttons" 
+                              :style "${replace(v_night-light-status, 'on', 'background-color: ${v_button-enabled-background}; border-color: ${v_button-enabled-border}')}"
+                              :onclick "./scripts/ToggleScript.sh NightLight"
+                              "Night Light"))
+                    (box :class "control-center-button-container" 
+                         :style ""
+                         (button :class "control-center-buttons" 
+                              :style "${replace(v_donotdisturb-status, 'on', 'background-color: ${v_button-enabled-background}; border-color: ${v_button-enabled-border}')}"
+                              :onclick "./scripts/ToggleScript.sh DoNotDisturb"
+                              "Do Not Disturb"))))
+                (box :class "control-center-inner-container":orientation "v" :space-evenly true :haligen "center" :valigen "start"
+                    (box :orientation "h"
+                         :space-evenly false
+                         :class "brightness-slider"
+                         :valign "start"
+                         (box :class "control-center-slider-labels" 
+                              :style "background-image: url('/usr/share/icons/Reversal-purple-dark/status/22/display-brightness-symbolic.svg');"
+                              "⠀    ${v_current-brightness}% ")
+                         (scale :min 10
+                                :max 101
+                                :hexpand true
+                                :orientation "h"
+                                :flipped false
+                                :value v_current-brightness
+                                :onchange "$HOME/eww/target/release/eww update v_current-brightness={} & brightnessctl set {}%")))
+                (box :class "control-center-inner-container":orientation "v" :space-evenly true :haligen "center" :valigen "start"
+                    (box :orientation "h"
+                         :space-evenly false
+                         :class "brightness-slider"
+                         :valign "start"
+                         (box :class "control-center-slider-labels" 
+                              :style "background-image: url('/usr/share/icons/Reversal-purple-dark/status/22/audio-volume-${v_audio-word}-panel.svg');"
+                              "⠀    ${v_audio-num}% ")
+                         (scale :min 0
+                                :max 101
+                                :hexpand true
+                                :orientation "h"
+                                :flipped false
+                                :value v_audio-num
+                                :onchange "$HOME/eww/target/release/eww update v_audio-num={} & amixer set Master {}%")))
+                (box :class "control-center-inner-container":orientation "v" :space-evenly true :haligen "center" :valigen "start"
+                    (box :orientation "h"
+                         :space-evenly false
+                         :class "brightness-slider"
+                         :valign "start"
+                         (box :class "control-center-slider-labels" 
+                              :style "background-image: url('/usr/share/icons/Reversal-purple-dark/status/22/audio-input-microphone-low-zero-panel.svg');"
+                              "⠀    ${v_mic-num}% ")
+                         (scale :min 0
+                                :max 101
+                                :hexpand true
+                                :orientation "h"
+                                :flipped false
+                                :value v_mic-num
+                                :onchange "$HOME/eww/target/release/eww update v_mic-num={} & amixer set Capture {}%")))))

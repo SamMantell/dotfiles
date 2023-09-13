@@ -1,0 +1,27 @@
+.logout-menu-background {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.logout-menu-button-container {
+    background-color: $background-dark;
+    border-radius: 20px;
+    padding: 12px;
+}
+
+.logout-menu-buttons {
+    background-color: $background-normal;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 25px;
+    &:hover{
+        border-color: $bright-secondary;
+        transition: 0.2s;
+    }
+}

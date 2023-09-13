@@ -1,0 +1,10 @@
+(defwindow ControlCenter
+    :geometry (geometry :x "-5px"
+                        :y "50px"
+                        :width "450px"
+                        :height "0px"
+                        :anchor "top right")
+    :monitor 0
+    :stacking "fg"
+    :windowtype "dock"
+(ControlCenter))

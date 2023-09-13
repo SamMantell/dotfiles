@@ -1,0 +1,27 @@
+.AudioSlider{
+    background-color: transparent;
+}
+
+.audio-slider-container{
+    background-color: transparent;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 7px;
+    border-radius: 20px;
+}
+
+.volume-slider scale trough highlight{
+    all:unset;
+    background-color: $bright-secondary;
+    border-radius: 20px;
+
+}
+
+.volume-slider scale trough{
+    all:unset;
+    background-color: $background-transparent;
+    border-radius: 10px;
+    min-width: 20px;
+    min-height: 150px;
+    margin: 2px;
+}

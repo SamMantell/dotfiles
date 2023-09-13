@@ -1,0 +1,22 @@
+(include "./src/yuck/Variables.yuck")
+
+(include "./src/yuck/TopBar/TopBarWindows.yuck")
+(include "./src/yuck/TopBar/TopBarWidgets.yuck")
+
+(include "./src/yuck/SystemInfo/SystemInfoWidgets.yuck")
+(include "./src/yuck/SystemInfo/SystemInfoWindows.yuck")
+
+(include "./src/yuck/Settings/AudioSettingsWindows.yuck")
+(include "./src/yuck/Settings/AudioSettingsWidgets.yuck")
+
+(include "./src/yuck/ControlCenter/ControlCenterWindows.yuck")
+(include "./src/yuck/ControlCenter/ControlCenterWidgets.yuck")
+
+(include "./src/yuck/MediaPlayer/MediaPlayerWindows.yuck")
+(include "./src/yuck/MediaPlayer/MediaPlayerWidgets.yuck")
+
+(include "./src/yuck/CloseWindow/CloseWindowWindows.yuck")
+(include "./src/yuck/CloseWindow/CloseWindowWidgets.yuck")
+
+(include "./src/yuck/LogoutMenu/LogoutMenuWindows.yuck")
+(include "./src/yuck/LogoutMenu/LogoutMenuWidgets.yuck")
