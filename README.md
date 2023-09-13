@@ -6,13 +6,13 @@ The setup I'm currently using is on ArcoLinux using BSPWM window manager, picom 
 
 # Screenshots
 ### Apps, virtual desktops and system info
-![](https://github.com/SamMantell/dotfiles-private/blob/main/assets/Screenshot1.png)
+![](https://github.com/SamMantell/dotfiles/blob/main/assets/Screenshot1.png)
 ### Rofi launcher menu and eww control pannel
-![](https://github.com/SamMantell/dotfiles-private/blob/main/assets/Screenshot2.png)
+![](https://github.com/SamMantell/dotfiles/blob/main/assets/Screenshot2.png)
 ### Logout menu
-![](https://github.com/SamMantell/dotfiles-private/blob/main/assets/Screenshot3.png)
+![](https://github.com/SamMantell/dotfiles/blob/main/assets/Screenshot3.png)
 ### Easy to change apps, icons and colour scheme in variables.yuck / variables.scss file
-![](https://github.com/SamMantell/dotfiles-private/blob/main/assets/Screenshot4.png)
+![](https://github.com/SamMantell/dotfiles/blob/main/assets/Screenshot4.png)
 
 # Dependencies
 
