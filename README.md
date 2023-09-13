@@ -46,6 +46,12 @@ cp -r $HOME/.config/eww $HOME/.config/eww-backup
 cp -r $HOME/.config/bspwm $HOME/.config/bspwm-backup
 ```
 
+### Remove previous configs (recommended)
+```sh
+rm -r $HOME/.config/eww
+rm -r $HOME/.config/bspwm
+```
+
 ### Install
 ```sh
 git clone https://github.com/SamMantell/dotfiles
