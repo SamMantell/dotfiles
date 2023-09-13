@@ -27,6 +27,7 @@ The setup I'm currently using is on ArcoLinux using BSPWM window manager, picom 
 - amixer
 - wmctl
 - feh
+- betterlockscreen
 
 ### Icons
 - [candy-icons](https://github.com/EliverLara/candy-icons)
