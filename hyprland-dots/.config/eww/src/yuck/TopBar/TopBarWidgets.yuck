@@ -2,17 +2,11 @@
     (box :class "top-bar-container":orientation "h" :halign "end" :hexpand true :vexpand true :space-evenly false :valign "center"
         (button :class "top-system-info" 
                 :style "background-image: url('/usr/share/icons/Reversal-dark/status/symbolic/network-wireless-signal-${v_wifi-signal-word}-symbolic.svg');"
-                :onclick "scripts/eww.sh open --toggle SystemInformation"
                 (label :text "⠀     ${v_wifi-signal-num}/70"))
         (button :class "top-system-info" 
                 :style "background-image: url('/usr/share/icons/Reversal-dark/status/symbolic/audio-volume-${v_audio-word}-symbolic.svg');"
                 :onclick "scripts/eww.sh open --toggle AudioSlider"
-                (label :text "⠀     ${v_audio-num}%"))
-        (button :class "top-system-info"
-                :align "right"
-                :style "background-image: url('/usr/share/icons/Reversal-dark/status/symbolic/battery-level-${round(v_battery/10,0)*10}-symbolic.svg');"
-                :onclick "scripts/eww.sh open --toggle SystemInformation" 
-                (label :text "⠀    ${v_battery}%"))
+                (label :text "⠀     ${v_audio-num}% ${v_current-workspace}"))
         (button :class "top-date-and-time"
                 :onclick "scripts/eww.sh open-many CloseWindow ControlCenter"
                 "${v_day-word-short}, ${v_day-number}, ${v_month-word-short} ${v_year-long}  ${v_hour-full}:${v_min}")))
@@ -20,35 +14,35 @@
 (defwidget widget_workspaces []
     (box :class "top-bar-container" :valign "center" :orientation "h" :halign "start" :hexpand true :vexpand true :space-evenly false
         (button :class "workspace-buttons"
-                :style "${replace(v_current-workspace, 0, 'background-color: ${v_active-workspace-colour};')}"
-                :onclick "/usr/share/eww/target/release/eww update v_current-workspace=0 & hyprctl dispatch workspace 1")
-        (button :class "workspace-buttons"
                 :style "${replace(v_current-workspace, 1, 'background-color: ${v_active-workspace-colour};')}"
-                :onclick "/usr/share/eww/target/release/eww update v_current-workspace=1 & hyprctl dispatch workspace 2")
+                :onclick "/usr/share/eww/target/release/eww update v_current-workspace=1 & hyprctl dispatch workspace 1")
         (button :class "workspace-buttons"
                 :style "${replace(v_current-workspace, 2, 'background-color: ${v_active-workspace-colour};')}"
-                :onclick "/usr/share/eww/target/release/eww update v_current-workspace=2 & hyprctl dispatch workspace 3")
+                :onclick "/usr/share/eww/target/release/eww update v_current-workspace=2 & hyprctl dispatch workspace 2")
         (button :class "workspace-buttons"
                 :style "${replace(v_current-workspace, 3, 'background-color: ${v_active-workspace-colour};')}"
-                :onclick "/usr/share/eww/target/release/eww update v_current-workspace=3 & hyprctl dispatch workspace 4")
+                :onclick "/usr/share/eww/target/release/eww update v_current-workspace=3 & hyprctl dispatch workspace 3")
         (button :class "workspace-buttons"
                 :style "${replace(v_current-workspace, 4, 'background-color: ${v_active-workspace-colour};')}"
-                :onclick "/usr/share/eww/target/release/eww update v_current-workspace=4 & hyprctl dispatch workspace 5")
+                :onclick "/usr/share/eww/target/release/eww update v_current-workspace=4 & hyprctl dispatch workspace 4")
         (button :class "workspace-buttons"
                 :style "${replace(v_current-workspace, 5, 'background-color: ${v_active-workspace-colour};')}"
-                :onclick "/usr/share/eww/target/release/eww update v_current-workspace=5 & hyprctl dispatch workspace 6")
+                :onclick "/usr/share/eww/target/release/eww update v_current-workspace=5 & hyprctl dispatch workspace 5")
         (button :class "workspace-buttons"
                 :style "${replace(v_current-workspace, 6, 'background-color: ${v_active-workspace-colour};')}"
-                :onclick "/usr/share/eww/target/release/eww update v_current-workspace=6 & hyprctl dispatch workspace 7")
+                :onclick "/usr/share/eww/target/release/eww update v_current-workspace=6 & hyprctl dispatch workspace 6")
         (button :class "workspace-buttons"
                 :style "${replace(v_current-workspace, 7, 'background-color: ${v_active-workspace-colour};')}"
-                :onclick "/usr/share/eww/target/release/eww update v_current-workspace=7 & hyprctl dispatch workspace 8")
+                :onclick "/usr/share/eww/target/release/eww update v_current-workspace=7 & hyprctl dispatch workspace 7")
         (button :class "workspace-buttons"
                 :style "${replace(v_current-workspace, 8, 'background-color: ${v_active-workspace-colour};')}"
-                :onclick "/usr/share/eww/target/release/eww update v_current-workspace=8 & hyprctl dispatch workspace 9")
+                :onclick "/usr/share/eww/target/release/eww update v_current-workspace=8 & hyprctl dispatch workspace 8")
         (button :class "workspace-buttons"
-                :style "margin-right: 8px; ${replace(v_current-workspace, 9, 'background-color: ${v_active-workspace-colour};')}"
-                :onclick "/usr/share/eww/target/release/eww update v_current-workspace=9 & hyprctl dispatch workspace 9")))
+                :style "${replace(v_current-workspace, 9, 'background-color: ${v_active-workspace-colour};')}"
+                :onclick "/usr/share/eww/target/release/eww update v_current-workspace=9 & hyprctl dispatch workspace 9")
+        (button :class "workspace-buttons"
+                :style "margin-right: 8px; ${replace(v_current-workspace, 0, 'background-color: ${v_active-workspace-colour};')}"
+                :onclick "/usr/share/eww/target/release/eww update v_current-workspace=0 & hyprctl dispatch workspace 9")))
 
 (defwidget widget_apps [rofi-type rofi-style app1 app2 app3 app4 app5 app6 app7 app8 app9 app10]
     (box :class "top-bar-container" :valign "center" :orientation "h" :halign "start" :hexpand true :vexpand true :space-evenly false

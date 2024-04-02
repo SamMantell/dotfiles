@@ -41,7 +41,7 @@ case "$1" in
                 output=$(nmcli radio wifi | sed 's/enabled/on/;s/disabled/off/')
                 ;;
             "StrengthWord")
-                strength_number=$(iwconfig wlp2s0 | awk -F'Link Quality=' '/Link Quality=/ {print $2}' | awk -F'/' '{print $1}')
+                strength_number=$(iwconfig wlp41s0 | awk -F'Link Quality=' '/Link Quality=/ {print $2}' | awk -F'/' '{print $1}')
                 if [ "$strength_number" = "0" ]; then
                     output="none"
                 elif [ "$strength_number" -lt "20" ]; then
@@ -55,7 +55,7 @@ case "$1" in
                 fi
                 ;;
             "StrengthNumber")
-                output=$(iwconfig wlp2s0 | awk -F'Link Quality=' '/Link Quality=/ {print $2}' | awk -F'/' '{print $1}')
+                output=$(iwconfig wlp41s0 | awk -F'Link Quality=' '/Link Quality=/ {print $2}' | awk -F'/' '{print $1}')
                 ;;
         esac
         ;;

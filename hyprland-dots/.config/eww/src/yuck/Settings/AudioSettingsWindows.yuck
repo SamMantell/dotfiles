@@ -10,4 +10,3 @@
     :focable "flase"
     :namespace "eww"
     (VolumeSlider))
-
