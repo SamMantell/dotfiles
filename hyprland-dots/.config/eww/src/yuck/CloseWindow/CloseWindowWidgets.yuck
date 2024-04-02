@@ -1,0 +1,5 @@
+(defwidget CloseWindow []
+    (button :hexpand true
+            :vexpand true
+            :onclick "/usr/share/eww/target/release/eww close CloseWindow ControlCenter")
+)

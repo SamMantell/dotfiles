@@ -1,0 +1,74 @@
+;This is a WIP
+
+(defwidget MediaPlayer []
+    (box :orientation "v"
+         :valigen "start"
+         :haligen "center"
+         :vexpand false
+         :space-evenly false
+         :class "media-container"
+         (box :orientation "h"
+              :valigen "center"
+              :haligen "center"
+              :vexpand false
+              :space-evenly true
+              (box :orientation "v"
+                   :width "200px"
+                   :height "200px"
+                   :class "media-inner-container"
+                   (box :orientation "h"
+                        :class "media-image"
+                        :style "background-image: url('');")) 
+              (box :orientation "v"
+                   :width "200px"
+                   :height "200px"
+                   :haligen "start"
+                   :space-evenly false
+                   :class "media-inner-container"
+                   (box :orientation "h"
+                        :haligen "start"
+                        :space-evenly false
+                        :class "media-text-small-titles"
+                        "song name:")
+                   (box :orientation "h"
+                        :haligen "start"
+                        :space-evenly false
+                        :class "media-text"
+                        "song name")
+                   (box :orientation "h"
+                        :haligen "start"
+                        :space-evenly false
+                        :class "media-text-small-titles"
+                        "artist name:")
+                   (box :orientation "h"
+                        :haligen "start"
+                        :space-evenly false
+                        :class "media-text"
+                        "artist name")
+                   (box :orientation "h"
+                        :haligen "center"
+                        :space-evenly true
+                        :class "media-button-container"
+                        (button :class "media-control-buttons"
+                                "<")
+                        (button :class "media-control-buttons"
+                                "||")
+                        (button :class "media-control-buttons"
+                                ">"))))
+            (box :class "media-inner-container":orientation "v" :space-evenly true :haligen "center" :valigen "start"
+                    (box :orientation "h"
+                         :space-evenly false
+                         :class "brightness-slider"
+                         :valign "start"
+                         (box :class "control-center-slider-labels"
+                              "⠀1:30  ")
+                         (scale :min 0
+                                :max 101
+                                :hexpand true
+                                :orientation "h"
+                                :flipped false
+                                :value 47
+                                :onchange "")
+                         (box :class "control-center-slider-labels"
+                              "⠀3:10  ")))
+))

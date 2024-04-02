@@ -14,7 +14,7 @@ super + shift + Return
 
 #rofi
 super + shift + d
-	~/.config/eww/scripts/Rofi.sh type-6 style-11
+	~/.config/eww/scripts/Rofi.sh type-6 style-10
 
 #reload sxhkd:
 super + shift + r

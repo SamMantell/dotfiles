@@ -1,0 +1,13 @@
+(defwindow AudioSlider
+    :geometry (geometry :x "-350px"
+                        :y "4%"
+                        :width "58px"
+                        :height "175px"
+                        :anchor "top right")
+    :monitor 0
+    :stacking "overlay"
+    :exclusive "false"
+    :focable "flase"
+    :namespace "eww"
+    (VolumeSlider))
+

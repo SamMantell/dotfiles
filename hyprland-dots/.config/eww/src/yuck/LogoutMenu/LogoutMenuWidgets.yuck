@@ -1,0 +1,33 @@
+(defwidget LogoutMenu []
+    (box :hexpand true
+         :vexpand true
+         :class "logout-menu-background"
+         (centerbox :orientation "v"
+                    (button :onclick "scripts/eww.sh close LogoutMenu")
+                    (box :orientation "h"
+                         :haligen "center"
+                         :valigen "center"
+                         :hexpand "false"
+                         :vexpand "false"
+                         :space-evenly "true"
+                         (centerbox :orientation "h"
+                                    (button :onclick "scripts/eww.sh close LogoutMenu")
+                                    (box :class "logout-menu-button-container"
+                                         (button :class "logout-menu-buttons"
+                                                 :style "background-image: url('${v_reboot-icon-path}');"
+                                                 :onclick "reboot")
+                                         (button :class "logout-menu-buttons"
+                                                 :style "background-image: url('${v_shutdown-icon-path}');"
+                                                 :onclick "shutdown -h 0")
+                                         (button :class "logout-menu-buttons"
+                                                 :style "background-image: url('${v_suspend-icon-path}');"
+                                                 :onclick "systemctl suspend")
+                                         (button :class "logout-menu-buttons"
+                                                 :style "background-image: url('${v_hibernate-icon-path}');"
+                                                 :onclick "hibernate")
+                                         (button :class "logout-menu-buttons"
+                                                 :style "background-image: url('${v_lock-icon-path}');"
+                                                 :onclick "betterlockscreen -l dim -- --time-str='%H:%M'"))
+                                         (button :onclick "scripts/eww.sh close LogoutMenu")))
+                         (button :onclick "scripts/eww.sh close LogoutMenu")))
+)

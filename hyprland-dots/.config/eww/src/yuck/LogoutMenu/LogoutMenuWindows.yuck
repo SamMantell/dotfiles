@@ -1,0 +1,12 @@
+(defwindow LogoutMenu
+    :geometry (geometry :x "0px"
+                        :y "0px"
+                        :width "100%"
+                        :height "100%"
+                        :anchor "center center")
+    :monitor 0
+    :stacking "overlay"
+    :exclusive "false"
+    :focable "flase"
+    :namespace "eww"
+(LogoutMenu))

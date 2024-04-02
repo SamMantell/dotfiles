@@ -53,9 +53,10 @@ rm -r $HOME/.config/bspwm
 ```
 
 ### Install
+This will install for bspwm (X11), change the `bspwm-dots` for `hyprland-dots` for hyprland (Wayland).
 ```sh
 git clone https://github.com/SamMantell/dotfiles
-cd dotfiles
+cd dotfiles/bspwm-dots
 cp -r .config/eww $HOME/.config
 cp -r .config/bspwm $HOME/.config
 cp .config/rofi/launchers/type-6/style-11.rasi $HOME/.config/rofi/launchers/type-6/

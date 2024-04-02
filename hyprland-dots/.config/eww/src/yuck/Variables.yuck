@@ -1,0 +1,96 @@
+;static variables
+
+;Resolution - not in use yet to be done
+(defvar v_resX 1920)
+(defvar v_ResY 1080)
+
+;rofi
+(defvar v_rofi-type "type-6")
+(defvar v_rofi-style "style-11")
+(defvar v_menu-icon-path "/usr/share/icons/Reversal-dark/actions/24/menu_new.svg")
+
+;colours
+
+;Default Colour Scheme
+(defvar v_button-enabled-background "rgba(233, 85, 255, 1)")
+(defvar v_button-enabled-border "rgba(237, 221, 255, 1)")
+(defvar v_active-workspace-colour "rgba(233, 153, 255, 1)")
+
+;Custom Colour Scheme
+;(defvar v_button-enabled-background "rgba(233, 85, 255, 1)")
+;(defvar v_button-enabled-border "rgba(237, 221, 255, 1)")
+;(defvar v_active-workspace-colour "rgba(233, 153, 255, 1)")
+
+;app commands
+(defvar v_app1-command "firefox-developer-edition")
+(defvar v_app2-command "firefox")
+(defvar v_app3-command "discord")
+(defvar v_app4-command "thunar")
+(defvar v_app5-command "code")
+(defvar v_app6-command "kitty")
+(defvar v_app7-command "github-desktop")
+(defvar v_app8-command "blender")
+(defvar v_app9-command "spotify")
+
+;app icons
+(defvar v_app1-icon-path "/usr/share/icons/candy-icons/apps/scalable/firefox-nightly.svg")
+(defvar v_app2-icon-path "/usr/share/icons/candy-icons/apps/scalable/firefox.svg")
+(defvar v_app3-icon-path "/usr/share/icons/candy-icons/apps/scalable/discord.svg")
+(defvar v_app4-icon-path "/usr/share/icons/candy-icons/apps/scalable/thunar.svg")
+(defvar v_app5-icon-path "/usr/share/icons/candy-icons/apps/scalable/code.svg")
+(defvar v_app6-icon-path "/usr/share/icons/candy-icons/apps/scalable/terminal.svg")
+(defvar v_app7-icon-path "/usr/share/icons/candy-icons/apps/scalable/appimagekit-github-desktop.svg")
+(defvar v_app8-icon-path "/usr/share/icons/candy-icons/apps/scalable/blender.svg")
+(defvar v_app9-icon-path "/usr/share/icons/candy-icons/apps/scalable/spotify.svg")
+
+;logout icons
+(defvar v_reboot-icon-path "/usr/share/icons/candy-icons/apps/scalable/system-restart.svg")
+(defvar v_shutdown-icon-path "/usr/share/icons/candy-icons/apps/scalable/system-shutdown.svg")
+(defvar v_suspend-icon-path "/usr/share/icons/candy-icons/apps/scalable/system-suspend.svg")
+(defvar v_hibernate-icon-path "/usr/share/icons/candy-icons/apps/scalable/system-hibernate.svg")
+(defvar v_lock-icon-path "/usr/share/icons/candy-icons/apps/scalable/system-lock-screen.svg")
+
+
+;polling variables
+
+;date and time full var set
+(defpoll v_hour-full :interval "5s"             `date +\'%H\'`)
+(defpoll v_hour-half :interval "5s"             `date +\'%I\'`)
+(defpoll v_am-pm :interval "5s"                 `date +\'%p\'`)
+(defpoll v_min :interval "5s"                   `date +\'%M\'`)
+(defpoll v_sec :interval "1s"                   `date +\'%S\'`)
+(defpoll v_day-word-long :interval "5s"         `date +\'%A\'`)
+(defpoll v_day-word-short :interval "5s"        `date +\'%a\'`)
+(defpoll v_day-number :interval "5s"            `date +\'%d\'`)
+(defpoll v_month-word-long :interval "5s"       `date +\'%B\'`)
+(defpoll v_month-word-short :interval "5s"      `date +\'%b\'`)
+(defpoll v_month-number :interval "5s"          `date +\'%m\'`)
+(defpoll v_year-short :interval "5s"            `date +\'%y\'`)
+(defpoll v_year-long :interval "5s"             `date +\'%Y\'`)
+
+;system information
+(defpoll v_audio-status :interval "10s"         './scripts/GetInfo.sh Audio Status')
+(defpoll v_audio-num :interval "5s"             './scripts/GetInfo.sh Audio Number')
+(defpoll v_audio-word :interval "1s"            './scripts/GetInfo.sh Audio Word')
+
+(defpoll v_mic-status :interval "10s"           './scripts/GetInfo.sh Mic Status')
+(defpoll v_mic-num :interval "5s"               './scripts/GetInfo.sh Mic Number')
+
+(defpoll v_bluetooth-status :interval "10s"     './scripts/GetInfo.sh Bluetooth Status')
+
+(defpoll v_wifi-status :interval "10s"          `./scripts/GetInfo.sh Wifi Status`)
+(defpoll v_wifi-signal-word :interval "5s"      './scripts/GetInfo.sh Wifi StrengthWord')
+(defpoll v_wifi-signal-num :interval "5s"       './scripts/GetInfo.sh Wifi StrengthNumber')
+
+(defpoll v_night-light-status :interval "10s"   './scripts/GetInfo.sh NightLight')
+
+(defpoll v_donotdisturb-status :interval "10s"  './scripts/GetInfo.sh DoNotDisturb')
+
+(defpoll v_battery :interval "30s"              'cat /sys/class/power_supply/BAT0/capacity')
+(defpoll v_cpu-temp :interval "5s"              './scripts/GetInfo.sh CPU Temperature')
+(defpoll v_current-workspace :interval "5s"     `hyprctl activeworkspace | grep -oP 'workspace ID \K\d+'`)
+(defpoll v_current-brightness :interval "20s"   './scripts/GetBrightness.sh')
+(defpoll v_disk-usage-one :interval "30s"       `df -h | grep /dev/sda2 | awk '{print ($3)" / "($2)}'`)
+(defpoll v_disk-usage-two :interval "30s"       `df -h | grep /dev/sda3 | awk '{print ($3)" / "($2)}'`)
+(defpoll v_disk-usage-three :interval "30s"     `df -h | grep /dev/sda4 | awk '{print ($3)" / "($2)}'`)
+(defpoll v_disk-usage-four :interval "30s"      `df -h | grep /dev/sda5 | awk '{print ($3)" / "($2)}'`)

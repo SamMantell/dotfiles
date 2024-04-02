@@ -1,0 +1,37 @@
+.SystemInformation {
+    all:unset;
+    background-color: transparent;
+    animation-timing-function: ease-in;
+    animation: fade-in 0.5s;
+    opacity: 1;
+}
+
+.system-info-container{
+    background-color: $background-normal;
+    border-radius: 1em;
+}
+
+.info-label{
+    all:unset;
+    font-size: 20px;
+    margin-top:15px;
+    color: $bright-primary;
+}
+
+.progress-circle{
+    color: $bright-primary; 
+    margin: 0px; 
+    font-size: 14px; 
+}
+
+.progress-circle-container{
+    padding: 0px;
+    margin: 8px; 
+    background-color: $background-dark; 
+    border-radius: 100%;
+}
+
+@keyframes fade-in {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}

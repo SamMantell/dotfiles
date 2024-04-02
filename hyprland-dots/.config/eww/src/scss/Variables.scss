@@ -1,0 +1,34 @@
+*{all: unset;}
+
+/* CHANGE THESE THREE IN THE Variables.yuck FILE.
+
+$button-enabled-background: rgba(233, 85, 255, 1);
+$button-enabled-border: rgba(237, 221, 255, 1);
+$active-workspace-colour: rgba(233, 153, 255, 1);
+
+*/
+
+//Default Colour Scheme
+
+$background-dark: rgba(20, 20 ,20 , 0.9);
+$background-normal: rgba(37, 37 ,37 , 0.9);
+$background-transparent: rgba(37, 37, 37, 0.8);
+
+$bright-primary: rgba(176, 254, 255, 0.9);
+$bright-secondary: rgba(233, 153, 255, 0.9);
+
+$subtle-hover-border: rgba(80, 80, 80, 0.9);
+$subtle-hover-background: rgba(50, 50, 50, 0.9);
+
+//Custom Colour Scheme
+/*
+$background-dark: rgba(20, 20 ,20 , 1);
+$background-normal: rgba(37, 37 ,37 , 1);
+$background-transparent: rgba(37, 37, 37, 0.8);
+
+$bright-primary: rgba(176, 254, 255, 1);
+$bright-secondary: rgba(233, 153, 255, 1);
+
+$subtle-hover-border: rgba(80, 80, 80, 1);
+$subtle-hover-background: rgba(50, 50, 50, 1);
+*/

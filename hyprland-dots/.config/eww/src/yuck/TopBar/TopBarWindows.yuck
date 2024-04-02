@@ -1,0 +1,46 @@
+(defwindow TopBarLeft
+    :monitor 0
+    :geometry (geometry :x "6px"
+                        :y "6px"
+                        :width "293px"
+                        :height "40px"
+                        :anchor "top left")
+    :stacking "overlay"
+    :windowtype "dock"
+    :wm-ignore true
+(widget_apps :rofi-type "type-6"
+             :rofi-style "style-10"
+             :app1 "menu_new"
+             :app2 "firefox-nightly"
+             :app3 "firefox"
+             :app4 "discord"
+             :app5 "thunar"
+             :app6 "code"
+             :app7 "terminal"
+             :app8 "github-desktop"
+             :app9 "blender"
+             :app10 "spotify"))
+
+(defwindow TopBarCenter
+    :monitor 0
+    :geometry (geometry :x "0%"
+                        :y "6px"
+                        :width "0%"
+                        :height "40px"
+                        :anchor "top center")
+    :stacking "overlay"
+    :windowtype "dock"
+    :wm-ignore true
+(widget_workspaces))
+
+(defwindow TopBarRight
+    :monitor 0
+    :geometry (geometry :x "6px"
+                        :y "6px"
+                        :width "0%"
+                        :height "40px"
+                        :anchor "top right")
+    :stacking "overlay"
+    :windowtype "dock"
+    :wm-ignore true
+(widget_settings))

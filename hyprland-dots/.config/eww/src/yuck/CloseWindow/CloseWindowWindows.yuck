@@ -1,0 +1,12 @@
+(defwindow CloseWindow
+    :geometry (geometry :x "0"
+                        :y "0"
+                        :width "100%"
+                        :height "100%"
+                        :anchor "top Left")
+    :monitor 0
+    :stacking "overlay"
+    :exclusive "false"
+    :focable "flase"
+    :namespace "eww"
+(CloseWindow))

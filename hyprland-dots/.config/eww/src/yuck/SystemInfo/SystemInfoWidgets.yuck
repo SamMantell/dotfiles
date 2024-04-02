@@ -1,0 +1,22 @@
+(defwidget SystemInfo []
+    (box :orientation "v"
+         :valigen "start"
+         :haligen "center"
+         :vexpand false
+         :space-evenly false
+         :class "system-info-container"
+        (label :class "info-label" :orientation "h" :text "System Info" :style "padding-bottom: 10px" "System Info")        (box :orientation "v" :space-evenly true :haligen "center" :valigen "start" :width 50 :height 50 :style "margin: 10px;"
+            (box :orientation "h" :haligen "center" :valigen "center" :width 250 :height 125
+                (box :orientation "v" :class "progress-circle-container"
+                    (circular-progress :value v_battery :start-at 75 :clockwise true :thickness 8 :class "progress-circle" :tooltip "battery: ${v_battery}%"
+                    "BAT - ${v_battery}%"))
+                (box :class "progress-circle-container"
+                    (circular-progress :value {round(EWW_CPU.avg, 0)} :start-at 75 :clockwise true :thickness 8 :class "progress-circle"
+                    "CPU - ${round(EWW_CPU.avg, 0)}%")))
+            (box :orientation "h" :haligen "center" :valigen "center" :width 250 :height 125 :style ""
+                (box :class "progress-circle-container"
+                    (circular-progress :value {round(EWW_RAM.used_mem_perc, 0)} :start-at 75 :clockwise true :thickness 8 :class "progress-circle"
+                    "RAM - ${round(EWW_RAM.used_mem_perc, 0)}%"))
+                (box :class "progress-circle-container"
+                    (circular-progress :value v_cpu-temp :start-at 75 :clockwise true :thickness 8 :class "progress-circle"
+                    "TEMP - ${v_cpu-temp}°c"))))))
