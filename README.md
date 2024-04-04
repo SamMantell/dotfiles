@@ -20,13 +20,13 @@ The setup I'm currently using is on ArcoLinux using BSPWM window manager, picom 
 - [eww widgets](https://elkowar.github.io/eww/)
 - [rofi](https://github.com/davatorium/rofi)
 - [rofi-themes](https://github.com/adi1090x/rofi)
-- xfce4-notifyd
+- [xfce4-notifyd](https://github.com/xfce-mirror/xfce4-notifyd)
 - brightnessctl
 - xrandr
 - nmcli
-- amixer
-- wmctl
-- feh
+- amixer / pamixer
+- wmctl / hyprctl
+- feh / variety
 - betterlockscreen
 
 ### Icons
