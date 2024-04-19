@@ -1,3 +1,3 @@
 #/bin/bash
 
-/usr/share/eww/target/release/eww $1 $2 $3
+/usr/share/eww/target/release/eww $1 $2 $3 $4

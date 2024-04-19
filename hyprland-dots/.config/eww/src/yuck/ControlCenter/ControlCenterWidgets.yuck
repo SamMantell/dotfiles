@@ -21,19 +21,19 @@
                       :valigen "center" 
                       :hexpand true 
                       :space-evenly true
-                      (box :class "control-center-button-container" 
+                      (box :class "control-center-button-container"
                            :style ""
                            (button :class "control-center-buttons" 
                                    :style "${replace(v_wifi-status, 'on', 'background-color: ${v_button-enabled-background}; border-color: ${v_button-enabled-border}')}"
                                    :onclick "./scripts/ToggleScript.sh WiFi"
                                    "WiFi"))
-                      (box :class "control-center-button-container" 
+                      (box :class "control-center-button-container"
                            :style ""
                           (button :class "control-center-buttons" 
                                   :style "${replace(v_audio-status, 'on', 'background-color: ${v_button-enabled-background}; border-color: ${v_button-enabled-border}')}"
                                   :onclick "./scripts/ToggleScript.sh Audio"
                                   "Audio"))
-                      (box :class "control-center-button-container" 
+                      (box :class "control-center-button-container"
                            :style ""
                           (button :class "control-center-buttons" 
                                   :style "${replace(v_mic-status, 'on', 'background-color: ${v_button-enabled-background}; border-color: ${v_button-enabled-border}')}"

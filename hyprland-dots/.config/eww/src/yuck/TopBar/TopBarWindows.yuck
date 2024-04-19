@@ -2,12 +2,13 @@
     :monitor 0
     :geometry (geometry :x "6px"
                         :y "6px"
-                        :width "293px"
+                        :width "0%"
                         :height "40px"
                         :anchor "top left")
-    :stacking "overlay"
-    :windowtype "dock"
-    :wm-ignore true
+    :stacking "fg"
+    :exclusive "false"
+    :focable "flase"
+    :namespace "eww"
 (widget_apps :rofi-type "type-6"
              :rofi-style "style-10"
              :app1 "menu_new"
@@ -28,9 +29,10 @@
                         :width "0%"
                         :height "40px"
                         :anchor "top center")
-    :stacking "overlay"
-    :windowtype "dock"
-    :wm-ignore true
+    :stacking "fg"
+    :exclusive "false"
+    :focable "flase"
+    :namespace "eww"
 (widget_workspaces))
 
 (defwindow TopBarRight
@@ -40,7 +42,8 @@
                         :width "0%"
                         :height "40px"
                         :anchor "top right")
-    :stacking "overlay"
-    :windowtype "dock"
-    :wm-ignore true
+    :stacking "fg"
+    :exclusive "false"
+    :focable "flase"
+    :namespace "eww"
 (widget_settings))

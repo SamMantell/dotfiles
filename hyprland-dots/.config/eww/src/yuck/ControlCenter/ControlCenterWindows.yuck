@@ -1,8 +1,8 @@
 (defwindow ControlCenter
-    :geometry (geometry :x "-5px"
-                        :y "50px"
+    :geometry (geometry :x "6px"
+                        :y "52px"
                         :width "450px"
-                        :height "0px"
+                        :height "0%"
                         :anchor "top right")
     :monitor 0
     :stacking "overlay"
