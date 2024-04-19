@@ -18,7 +18,7 @@
                    :class "media-inner-container"
                    (box :orientation "h"
                         :class "media-image"
-                        :style "background-image: url('');")) 
+                        :style "background-image: url('${v_media-cover-art}');")) 
               (box :orientation "v"
                    :width "200px"
                    :height "200px"
@@ -29,31 +29,34 @@
                         :haligen "start"
                         :space-evenly false
                         :class "media-text-small-titles"
-                        "song name:")
+                        "title :")
                    (box :orientation "h"
                         :haligen "start"
                         :space-evenly false
                         :class "media-text"
-                        "song name")
+                        "${v_media-title}")
                    (box :orientation "h"
                         :haligen "start"
                         :space-evenly false
                         :class "media-text-small-titles"
-                        "artist name:")
+                        "artist name :")
                    (box :orientation "h"
                         :haligen "start"
                         :space-evenly false
                         :class "media-text"
-                        "artist name")
+                        "${v_media-artist}")
                    (box :orientation "h"
                         :haligen "center"
                         :space-evenly true
                         :class "media-button-container"
                         (button :class "media-control-buttons"
+                                :onclick "playerctl previous"
                                 "<")
                         (button :class "media-control-buttons"
+                                :onclick "playerctl play-pause"
                                 "||")
                         (button :class "media-control-buttons"
+                                :onclick "playerctl next"
                                 ">"))))
             (box :class "media-inner-container":orientation "v" :space-evenly true :haligen "center" :valigen "start"
                     (box :orientation "h"
@@ -61,14 +64,14 @@
                          :class "brightness-slider"
                          :valign "start"
                          (box :class "control-center-slider-labels"
-                              "⠀1:30  ")
+                              "⠀${round(v_media-position / 60, 0)}:${round(v_media-position % 60, 0)}   ")
                          (scale :min 0
-                                :max 101
+                                :max v_media-length
                                 :hexpand true
                                 :orientation "h"
                                 :flipped false
-                                :value 47
-                                :onchange "")
+                                :value v_media-position
+                                :onchange "/usr/share/eww/target/release/eww update v_media-position={} & playerctl position {}")
                          (box :class "control-center-slider-labels"
-                              "⠀3:10  ")))
+                              "⠀${round(v_media-length/ 60, 0)}:${round(v_media-length % 60, 0)}   ")))
 ))

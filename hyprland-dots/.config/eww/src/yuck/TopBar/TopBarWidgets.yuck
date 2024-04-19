@@ -6,9 +6,9 @@
         (button :class "top-system-info" 
                 :style "background-image: url('/usr/share/icons/Reversal-dark/status/symbolic/audio-volume-${v_audio-word}-symbolic.svg');"
                 :onclick "scripts/eww.sh open --toggle AudioSlider"
-                (label :text "⠀     ${v_audio-num}% ${v_current-workspace}"))
+                (label :text "⠀     ${v_audio-num}%"))
         (button :class "top-date-and-time"
-                :onclick "scripts/eww.sh open-many CloseWindow ControlCenter"
+                :onclick "scripts/eww.sh open-many CloseWindow ControlCenter MediaPlayer"
                 "${v_day-word-short}, ${v_day-number}, ${v_month-word-short} ${v_year-long}  ${v_hour-full}:${v_min}")))
 
 (defwidget widget_workspaces []
@@ -39,9 +39,6 @@
                 :onclick "/usr/share/eww/target/release/eww update v_current-workspace=8 & hyprctl dispatch workspace 8")
         (button :class "workspace-buttons"
                 :style "${replace(v_current-workspace, 9, 'background-color: ${v_active-workspace-colour};')}"
-                :onclick "/usr/share/eww/target/release/eww update v_current-workspace=9 & hyprctl dispatch workspace 9")
-        (button :class "workspace-buttons"
-                :style "margin-right: 8px; ${replace(v_current-workspace, 0, 'background-color: ${v_active-workspace-colour};')}"
                 :onclick "/usr/share/eww/target/release/eww update v_current-workspace=0 & hyprctl dispatch workspace 9")))
 
 (defwidget widget_apps [rofi-type rofi-style app1 app2 app3 app4 app5 app6 app7 app8 app9 app10]

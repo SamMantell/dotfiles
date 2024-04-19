@@ -12,9 +12,9 @@
 ;colours
 
 ;Default Colour Scheme
-(defvar v_button-enabled-background "rgba(233, 85, 255, 1)")
-(defvar v_button-enabled-border "rgba(237, 221, 255, 1)")
-(defvar v_active-workspace-colour "rgba(233, 153, 255, 1)")
+(defvar v_button-enabled-background "rgba(228, 103, 99, 1)")
+(defvar v_button-enabled-border "rgba(253, 253, 254, 1)")
+(defvar v_active-workspace-colour "rgba(228, 103, 99, 1)")
 
 ;Custom Colour Scheme
 ;(defvar v_button-enabled-background "rgba(233, 85, 255, 1)")
@@ -94,3 +94,11 @@
 (defpoll v_disk-usage-two :interval "30s"               `df -h | grep /dev/sda3 | awk '{print ($3)" / "($2)}'`)
 (defpoll v_disk-usage-three :interval "30s"             `df -h | grep /dev/sda4 | awk '{print ($3)" / "($2)}'`)
 (defpoll v_disk-usage-four :interval "30s"              `df -h | grep /dev/sda5 | awk '{print ($3)" / "($2)}'`)
+
+;media player
+
+(defpoll v_media-title :interval "1s"                   `playerctl metadata title`)
+(defpoll v_media-artist :interval "1s"                  `playerctl metadata artist`)
+(defpoll v_media-position :interval "1s"                `playerctl position`)
+(defpoll v_media-length :interval "1s"                  `playerctl metadata | grep length | awk '{ print $3/1000000 }'`)
+(defpoll v_media-cover-art :interval "1s"               `playerctl metadata | grep artUrl | awk '{ print $3 }'`)

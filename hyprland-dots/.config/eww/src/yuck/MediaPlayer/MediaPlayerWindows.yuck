@@ -1,8 +1,8 @@
 (defwindow MediaPlayer
-    :geometry (geometry :x "-5px"
-                        :y "460px"
-                        :width "450px"
-                        :height "200px"
+    :geometry (geometry :x "6px"
+                        :y "462px"
+                        :width "0%"
+                        :height "0%"
                         :anchor "top right")
     :monitor 0
     :stacking "overlay"
